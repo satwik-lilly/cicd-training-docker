@@ -23,7 +23,7 @@ env:
 
 jobs:
   integration: 
-    uses: satwik-lilly/cicd-training-docker/.github/workflows/python-app.yml@main
+    uses: satwik-lilly/cicd-training-python/.github/workflows/python-app.yml@main
     permissions: 
       contents: read
       
