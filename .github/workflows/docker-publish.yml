@@ -21,10 +21,15 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-
 jobs:
+  integration: 
+    uses: satwik-lilly/cicd-training-docker/.github/workflows/python-app.yml@main
+    permissions: 
+      contents: read
+      
   build:
-
+    needs: [integration]
+    
     runs-on: ubuntu-latest
     permissions:
       contents: read
